@@ -5,7 +5,9 @@ const Layout = () => {
   return (
     <div className="mt-24">
       <Navbar />
-      <Outlet className="min-vh-100" />
+      <div id="page-root">
+        <Outlet />
+      </div>
       <footer className="footer footer-center p-10 bg-black text-neutral-content rounded w-full ">
         <div className="grid grid-flow-col gap-4">
           <Link className="link link-hover inner-navlink" to="/about">
@@ -17,8 +19,8 @@ const Layout = () => {
         </div>
         <div>
           <p id="copyright">
-            Copyright © {new Date().getUTCFullYear()} - JT Hair Care, all rights
-            reserved.
+            Copyright © {new Date().getUTCFullYear()} - JT Hair Care, all
+            rights reserved.
           </p>
           <p>
             A Website by <Link to="https://chrisyates.dev">Chris Yates</Link>
