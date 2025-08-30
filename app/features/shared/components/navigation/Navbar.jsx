@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Logo from "/assets/logo.webp";
 import { hours } from "../../data/hours";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import { isMobile } from "../../util/isMobile";
 
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  const location = useLocation();
 
   const store = hours[new Date().getDay()];
 
@@ -13,23 +15,15 @@ export const Navbar = () => {
   const inactiveLinkClasses = "bg-black text-white hover:bg-neutral-800";
 
   const activeHome =
-    window.location.pathname === "/" ? activeLinkClasses : inactiveLinkClasses;
+    location.pathname === "/" ? activeLinkClasses : inactiveLinkClasses;
   const activeContact =
-    window.location.pathname === "/contact"
-      ? activeLinkClasses
-      : inactiveLinkClasses;
+    location.pathname === "/contact" ? activeLinkClasses : inactiveLinkClasses;
   const activeServices =
-    window.location.pathname === "/services"
-      ? activeLinkClasses
-      : inactiveLinkClasses;
+    location.pathname === "/services" ? activeLinkClasses : inactiveLinkClasses;
   const activeTeam =
-    window.location.pathname === "/our-team"
-      ? activeLinkClasses
-      : inactiveLinkClasses;
+    location.pathname === "/our-team" ? activeLinkClasses : inactiveLinkClasses;
   const activeAbout =
-    window.location.pathname === "/about"
-      ? activeLinkClasses
-      : inactiveLinkClasses;
+    location.pathname === "/about" ? activeLinkClasses : inactiveLinkClasses;
 
   return (
     <div
