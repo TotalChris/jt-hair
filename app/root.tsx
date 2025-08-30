@@ -29,6 +29,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="google-site-verification"
+          content="y2Hl3Dn5pGqBCIPgogrNzhouhWxP59W-ePnjzduvqYM"
+        />
+        <meta name="msvalidate.01" content="581EC4B062DDEE99DBB9688F27649561" />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/icons/application/x192.png"
+        />
+
         <Meta />
         <Links />
       </head>
