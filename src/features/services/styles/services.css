@@ -1,0 +1,58 @@
+.m-icon {
+    height: 24px;
+    width: 24px;
+    margin-right: -5px;
+}
+
+.man {
+    background: url("assets/icons/content/man.svg");
+    background-size: contain;
+}
+
+.woman {
+    background: url("assets/icons/content/woman.svg");
+    background-size: contain;
+}
+
+.family {
+    background: url("assets/icons/content/family.svg");
+    background-size: contain;
+}
+
+.buttonbar {
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, 0%);
+    z-index: 30;
+    transition: right .3s ease-in-out, transform .3s ease-in-out;
+}
+
+.header {
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.expand .buttonbar {
+    right: 0%;
+    transform: translate(0%, 0%);
+}
+
+.expand .header {
+    opacity: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .buttonbar {
+        position: static;
+        transform: none;
+        right: 0;
+    }
+
+    .header {
+        display: none;
+    }
+
+    #banner {
+        justify-content: center;
+    }
+}

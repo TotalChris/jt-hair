@@ -1,0 +1,19 @@
+.staff-item {
+    display: flex;
+    flex-direction: row;
+    height: 170px;
+    width: auto;
+}
+
+.staff-item img {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+}
+
+.staff-item .bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+}

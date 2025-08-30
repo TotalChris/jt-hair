@@ -6,12 +6,12 @@ import {
 } from "@react-router/dev/routes";
 
 export default [
-  layout("./features/shared/components/utility/Layout.tsx", [
-    index("./features/home/components/HomePage.tsx"),
-    route("about", "./features/about/components/AboutPage.tsx"),
-    route("services", "./features/services/components/ServicesPage.tsx"),
-    route("contact", "./features/contact/components/ContactPage.tsx"),
-    route("our-team", "./features/team/components/TeamPage.tsx"),
-    route("*?", "./features/shared/components/navigation/CatchAll.tsx"),
+  layout("./features/shared/components/utility/Layout.jsx", [
+    index("./features/home/components/HomePage.jsx"),
+    route("about", "./features/about/components/AboutPage.jsx"),
+    route("services", "./features/services/components/ServicesPage.jsx"),
+    route("contact", "./features/contact/components/ContactPage.jsx"),
+    route("our-team", "./features/team/components/TeamPage.jsx"),
+    route("*?", "./features/shared/components/navigation/CatchAll.jsx"),
   ]),
 ] satisfies RouteConfig;
