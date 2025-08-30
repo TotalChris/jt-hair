@@ -5,17 +5,17 @@
 }
 
 .man {
-    background: url("assets/icons/content/man.svg");
+    background: url("icons/content/man.svg");
     background-size: contain;
 }
 
 .woman {
-    background: url("assets/icons/content/woman.svg");
+    background: url("icons/content/woman.svg");
     background-size: contain;
 }
 
 .family {
-    background: url("assets/icons/content/family.svg");
+    background: url("icons/content/family.svg");
     background-size: contain;
 }
 
