@@ -8,11 +8,63 @@
     }
 }
 
+@keyframes carousel-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes carousel-fade-out {
+
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 #carouselScaffold {
+    view-transition-name: carousel;
     overflow: hidden;
     z-index: 0 !important;
     -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, .2) 0, #000 15%, #000 85%, rgba(0, 0, 0, .2));
 }
+
+::view-transition-group(carousel) {
+    z-index: 0 !important;
+    animation-timing-function: ease;
+    animation-duration: .5s;
+}
+
+::view-transition-image-pair(carousel) {
+    animation-timing-function: ease;
+    animation-duration: .5s;
+    animation-name: carousel-fade-in;
+}
+
+::view-transition-new(carousel) {
+    animation-name: carousel-fade-in;
+}
+
+::view-transition-old(carousel) {
+    animation-name: carousel-fade-out;
+}
+
+
 
 #carousel {
     display: inline-flex;
@@ -20,6 +72,7 @@
     min-height: 300px;
     margin-block: 16px;
     animation: carousel 60s linear 0s infinite;
+    z-index: 0 !important;
 }
 
 .childImage {
