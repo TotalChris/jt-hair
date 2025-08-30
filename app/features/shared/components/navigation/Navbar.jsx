@@ -56,7 +56,11 @@ export const Navbar = () => {
           >
             <i className="bi bi-list"></i>
           </button>
-          <Link to="/" className="flex flex-row h-full items-center">
+          <Link
+            to="/"
+            className="flex flex-row h-full items-center"
+            viewTransition={!(location.pathname === "/")}
+          >
             <img
               src={Logo}
               alt="logo"
@@ -69,6 +73,7 @@ export const Navbar = () => {
             id="buttonRoot"
             aria-label="call"
             className="btn btn-ghost text-white text-2xl font-bold md:hidden h-14 hover:bg-neutral-800"
+            viewTransition={!(location.pathname === "/contact")}
           >
             <i className="bi bi-telephone"></i>
           </Link>
@@ -77,6 +82,7 @@ export const Navbar = () => {
               to="/"
               data-name="/"
               className={`navlink btn btn-ghost ${activeHome} font-bold font-inter normal-case`}
+              viewTransition={!(location.pathname === "/")}
             >
               Home
             </Link>
@@ -84,6 +90,7 @@ export const Navbar = () => {
               to="./services"
               data-name="/services"
               className={`navlink btn btn-ghost ${activeServices} font-bold font-inter normal-case`}
+              viewTransition={!(location.pathname === "/services")}
             >
               Services & Pricing
             </Link>
@@ -91,6 +98,7 @@ export const Navbar = () => {
               to="./our-team"
               data-name="/our-team"
               className={`navlink btn btn-ghost ${activeTeam} font-bold font-inter normal-case`}
+              viewTransition={!(location.pathname === "/our-team")}
             >
               Our Team
             </Link>
@@ -98,6 +106,7 @@ export const Navbar = () => {
               to="./about"
               data-name="/about"
               className={`navlink btn btn-ghost ${activeAbout} font-bold font-inter normal-case`}
+              viewTransition={!(location.pathname === "/about")}
             >
               About
             </Link>
@@ -105,6 +114,7 @@ export const Navbar = () => {
               to="./contact"
               data-name="/contact"
               className={`navlink btn btn-ghost ${activeContact} font-bold font-inter normal-case`}
+              viewTransition={!(location.pathname === "/contact")}
             >
               Contact
             </Link>
@@ -121,6 +131,7 @@ export const Navbar = () => {
             onClick={() => setNavOpen(false)}
             data-name="/"
             className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeHome}`}
+            viewTransition
           >
             Home
           </Link>
@@ -129,6 +140,7 @@ export const Navbar = () => {
             onClick={() => setNavOpen(false)}
             data-name="/services"
             className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeServices}`}
+            viewTransition={!(location.pathname === "/services")}
           >
             Services & Pricing
           </Link>
@@ -137,6 +149,7 @@ export const Navbar = () => {
             onClick={() => setNavOpen(false)}
             data-name="/our-team"
             className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeTeam}`}
+            viewTransition={!(location.pathname === "/our-team")}
           >
             Our Team
           </Link>
@@ -145,6 +158,7 @@ export const Navbar = () => {
             onClick={() => setNavOpen(false)}
             data-name="/about"
             className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeAbout}`}
+            viewTransition={!(location.pathname === "/about")}
           >
             About
           </Link>
@@ -153,6 +167,7 @@ export const Navbar = () => {
             onClick={() => setNavOpen(false)}
             data-name="/contact"
             className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeContact}`}
+            viewTransition={!(location.pathname === "/contact")}
           >
             Contact
           </Link>

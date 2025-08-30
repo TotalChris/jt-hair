@@ -90,6 +90,14 @@ body {
     background: linear-gradient(to bottom, #fff 0, #00000000 100%);
 }
 
+#navbarRoot {
+    view-transition-name: navbar;
+}
+
+::view-transition-group(navbar) {
+    z-index: 50;
+}
+
 html,
 body,
 #root {
@@ -141,14 +149,24 @@ body,
     animation: slide-page-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.slide-in-bottom {
+.slide-in-bottom,
+::view-transition-new(page-navigation) {
+    z-index: -50;
     -webkit-animation: slide-page-in 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: slide-page-in 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation-delay: 0.25s;
 }
 
-.slide-out-bottom {
+.slide-out-bottom,
+::view-transition-old(page-navigation) {
+    z-index: -50;
     -webkit-animation: slide-page-out 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     animation: slide-page-out 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+#page-root {
+    z-index: -50;
+    view-transition-name: page-navigation;
 }
 
 .jt-headpiece-1 {
