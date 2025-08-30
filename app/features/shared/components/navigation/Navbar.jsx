@@ -12,21 +12,7 @@ export const Navbar = () => {
 
   const store = hours[new Date().getDay()];
 
-  const activeLinkClasses = "bg-white text-black hover:bg-neutral-200";
-  const inactiveLinkClasses = "bg-black text-white hover:bg-neutral-800";
-
   const closeNav = () => setNavOpen(false);
-
-  const activeHome =
-    location.pathname === "/" ? activeLinkClasses : inactiveLinkClasses;
-  const activeContact =
-    location.pathname === "/contact" ? activeLinkClasses : inactiveLinkClasses;
-  const activeServices =
-    location.pathname === "/services" ? activeLinkClasses : inactiveLinkClasses;
-  const activeTeam =
-    location.pathname === "/our-team" ? activeLinkClasses : inactiveLinkClasses;
-  const activeAbout =
-    location.pathname === "/about" ? activeLinkClasses : inactiveLinkClasses;
 
   return (
     <div

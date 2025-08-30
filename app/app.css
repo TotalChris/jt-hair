@@ -165,7 +165,7 @@ body,
     z-index: -50;
     -webkit-animation: slide-page-in 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     animation: slide-page-in 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation-delay: .25s;
+    animation-delay: 0.2s;
 }
 
 .slide-out-bottom,
