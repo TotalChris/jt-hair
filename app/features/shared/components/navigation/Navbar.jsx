@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Logo from "/assets/logo.webp";
 import { hours } from "../../data/hours";
 import { Link, useLocation } from "react-router";
@@ -14,10 +14,14 @@ export const Navbar = () => {
 
   const closeNav = () => setNavOpen(false);
 
+  const isMobileDevice = useMemo(() => {
+    return isMobile();
+  }, []);
+
   return (
     <div
       id="navbarRoot"
-      className={`fixed right-0 left-0 top-0 z-20 ${
+      className={`fixed right-0 left-0 top-0 ${
         navOpen ? "bottom-0 navbar-root-mist-open" : "navbar-root-mist-closed"
       }`}
       onClick={(e) => {
@@ -57,7 +61,7 @@ export const Navbar = () => {
             />
           </Link>
           <Link
-            to={isMobile() ? "tel:8105225028" : "/contact"}
+            to={isMobileDevice ? "tel:8105225028" : "/contact"}
             onClick={() => setNavOpen(false)}
             id="buttonRoot"
             aria-label="call"
@@ -86,7 +90,7 @@ export const Navbar = () => {
       </div>
       <div
         id="ticker"
-        className="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 bg-jt-grad text-black drop-shadow-2xl rounded-b-box h-8 flex flex-row items-center justify-center gap-2"
+        className="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 bg-jt-grad text-black drop-shadow-2xl rounded-b-box h-8 flex flex-row items-center justify-center gap-2 z-50"
       >
         <div style={{ fontWeight: 800 }}>
           {store.isOpen ? "Open Today" : "Closed"}

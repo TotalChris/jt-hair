@@ -93,12 +93,19 @@ body {
 #navbarRoot {
     view-transition-name: navbar;
 
+    z-index: 50;
+
     & #navbarWrapper {
         transition: height 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.75);
     }
 }
 
+::view-transition-group(navbar) {
+    z-index: 50;
+}
+
 ::view-transition-old(navbar) {
+    z-index: 50;
     animation: none;
     visibility: hidden;
 }
