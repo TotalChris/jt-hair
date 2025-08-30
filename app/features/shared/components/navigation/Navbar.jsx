@@ -3,6 +3,7 @@ import Logo from "/assets/logo.webp";
 import { hours } from "../../data/hours";
 import { Link, useLocation } from "react-router";
 import { isMobile } from "../../util/isMobile";
+import { MenuLink } from "./MenuLink";
 
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -13,6 +14,8 @@ export const Navbar = () => {
 
   const activeLinkClasses = "bg-white text-black hover:bg-neutral-200";
   const inactiveLinkClasses = "bg-black text-white hover:bg-neutral-800";
+
+  const closeNav = () => setNavOpen(false);
 
   const activeHome =
     location.pathname === "/" ? activeLinkClasses : inactiveLinkClasses;
@@ -39,7 +42,7 @@ export const Navbar = () => {
     >
       <div
         id="navbarWrapper"
-        className={`min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 mt-4 bg-black drop-shadow-2xl rounded-t-box h-20 md:!h-20 transition-all ${
+        className={`min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 mt-4 bg-black drop-shadow-2xl rounded-t-box h-20 md:!h-20 ${
           navOpen ? "h-96" : ""
         }`}
       >
@@ -78,100 +81,22 @@ export const Navbar = () => {
             <i className="bi bi-telephone"></i>
           </Link>
           <div className="hidden md:flex ml-0 gap-2 w-full md:w-auto h-auto !text-2xl md:ml-auto md:my-auto px-2">
-            <Link
-              to="/"
-              data-name="/"
-              className={`navlink btn btn-ghost ${activeHome} font-bold font-inter normal-case`}
-              viewTransition={!(location.pathname === "/")}
-            >
-              Home
-            </Link>
-            <Link
-              to="./services"
-              data-name="/services"
-              className={`navlink btn btn-ghost ${activeServices} font-bold font-inter normal-case`}
-              viewTransition={!(location.pathname === "/services")}
-            >
-              Services & Pricing
-            </Link>
-            <Link
-              to="./our-team"
-              data-name="/our-team"
-              className={`navlink btn btn-ghost ${activeTeam} font-bold font-inter normal-case`}
-              viewTransition={!(location.pathname === "/our-team")}
-            >
-              Our Team
-            </Link>
-            <Link
-              to="./about"
-              data-name="/about"
-              className={`navlink btn btn-ghost ${activeAbout} font-bold font-inter normal-case`}
-              viewTransition={!(location.pathname === "/about")}
-            >
-              About
-            </Link>
-            <Link
-              to="./contact"
-              data-name="/contact"
-              className={`navlink btn btn-ghost ${activeContact} font-bold font-inter normal-case`}
-              viewTransition={!(location.pathname === "/contact")}
-            >
-              Contact
-            </Link>
+            <MenuLink to="/" label="Home" />
+            <MenuLink to="/services" label="Services" />
+            <MenuLink to="/our-team" label="Our Team" />
+            <MenuLink to="/about" label="About" />
+            <MenuLink to="/contact" label="Contact" />
           </div>
         </div>
-        <div
-          id="drawerContents"
-          className={`flex flex-col gap-2 h-72 m-2 md:!hidden ${
-            navOpen ? "visible" : "hidden"
-          }`}
-        >
-          <Link
-            to="/"
-            onClick={() => setNavOpen(false)}
-            data-name="/"
-            className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeHome}`}
-            viewTransition
-          >
-            Home
-          </Link>
-          <Link
-            to="./services"
-            onClick={() => setNavOpen(false)}
-            data-name="/services"
-            className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeServices}`}
-            viewTransition={!(location.pathname === "/services")}
-          >
-            Services & Pricing
-          </Link>
-          <Link
-            to="./our-team"
-            onClick={() => setNavOpen(false)}
-            data-name="/our-team"
-            className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeTeam}`}
-            viewTransition={!(location.pathname === "/our-team")}
-          >
-            Our Team
-          </Link>
-          <Link
-            to="./about"
-            onClick={() => setNavOpen(false)}
-            data-name="/about"
-            className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeAbout}`}
-            viewTransition={!(location.pathname === "/about")}
-          >
-            About
-          </Link>
-          <Link
-            to="./contact"
-            onClick={() => setNavOpen(false)}
-            data-name="/contact"
-            className={`navlink btn bg-transparent border-0 font-bold font-inter normal-case ${activeContact}`}
-            viewTransition={!(location.pathname === "/contact")}
-          >
-            Contact
-          </Link>
-        </div>
+        {navOpen && (
+          <div className="flex flex-col gap-2 h-72 m-2 md:!hidden">
+            <MenuLink to="/" label="Home" onClick={closeNav} />
+            <MenuLink to="/services" label="Services" onClick={closeNav} />
+            <MenuLink to="/our-team" label="Our Team" onClick={closeNav} />
+            <MenuLink to="/about" label="About" onClick={closeNav} />
+            <MenuLink to="/contact" label="Contact" onClick={closeNav} />
+          </div>
+        )}
       </div>
       <div
         id="ticker"
