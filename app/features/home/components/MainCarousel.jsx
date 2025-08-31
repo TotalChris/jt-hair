@@ -12,9 +12,13 @@ export const MainCarousel = () => (
         <img src={Woman2} className="childImage" />
         <img src={Woman1} className="childImage" />
         <img src={WomensCut} className="childImage" />
+        <img src={MensCut} className="childImage" />
+        <img src={Tools} className="childImage" />
         <img src={Woman2} className="childImage" />
         <img src={Woman1} className="childImage" />
         <img src={WomensCut} className="childImage" />
+        <img src={MensCut} className="childImage" />
+        <img src={Tools} className="childImage" />
       </div>
       <div className="wavy-circle">
         <div className="sticker-text emphasis">JT Body Care</div>

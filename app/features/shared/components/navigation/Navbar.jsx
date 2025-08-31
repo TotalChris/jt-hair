@@ -70,7 +70,7 @@ export const Navbar = () => {
           >
             <i className="bi bi-telephone"></i>
           </Link>
-          <div className="hidden md:flex ml-0 gap-2 w-full md:w-auto h-auto !text-2xl md:ml-auto md:my-auto px-2">
+          <div className="hidden md:flex ml-0 gap-1 w-full md:w-auto h-auto !text-2xl md:ml-auto md:my-auto px-2">
             <MenuLink to="/" label="Home" />
             <MenuLink to="/services" label="Hair Services" />
             <MenuLink to="/body-care" label="Body Services" />

@@ -7,7 +7,7 @@ export const MenuLink = ({ to, label, onClick }) => {
 
   return (
     <Link
-      className={`navlink btn btn-ghost ${location.pathname === to ? activeLinkClasses : inactiveLinkClasses} font-bold font-inter normal-case`}
+      className={`navlink btn btn-ghost px-3 ${location.pathname === to ? activeLinkClasses : inactiveLinkClasses} font-bold font-inter normal-case`}
       to={to}
       onClick={onClick}
       viewTransition={!(location.pathname === to)}
