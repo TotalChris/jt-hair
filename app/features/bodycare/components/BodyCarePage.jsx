@@ -7,8 +7,13 @@ import { Link } from "react-router";
 const sections = [
   { id: "facials", label: "Facials", icon: "bi-emoji-smile" },
   { id: "waxing", label: "Waxing", icon: "bi-stars" },
-  { id: "body-treatment-services", label: "Body treatment", icon: "bi-heart" },
-  { id: "feature-enhancing-services", label: "Features", icon: "bi-gem" },
+  { id: "headspa-services", label: "Headspa", icon: "bi-droplet" },
+  { id: "body-treatment-services", label: "Body Treatment", icon: "bi-heart" },
+  {
+    id: "feature-enhancing-services",
+    label: "Feature Enhancing",
+    icon: "bi-gem",
+  },
 ];
 
 const BodyCarePage = () => {
@@ -40,7 +45,7 @@ const BodyCarePage = () => {
         title="Body Services"
         description="JT Body Care services, facials, waxing, headspa, body treatments, and more."
       />
-      <div className="min-w-screen lg:max-w-6xl 2xl:max-w-7xl lg:mx-auto my-4 mx-4">
+      <div className="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto my-4 mx-4">
         <header className="pt-24 !pb-12 text-center">
           <h1 className="font-bold text-7xl p-4 text-center">
             <i className="bi bi-flower1 mx-auto text-black"></i>
@@ -73,7 +78,12 @@ const BodyCarePage = () => {
 
           {/* Content */}
           <main className="col-span-12 lg:col-span-9 flex flex-col gap-10">
-            <section className="bc-intro"></section>
+            <section className="bc-intro">
+              <p className="italic text-gray-600">
+                JT Body Care Services is located at 9701 Village Place Blvd,
+                Suite 4, Brighton, MI 48116. All services by appointment only.
+              </p>
+            </section>
 
             <section id="facials" className="bc-section">
               <h2 className="bc-h2">
@@ -393,7 +403,7 @@ const BodyCarePage = () => {
 
             <section id="headspa-services" className="bc-section">
               <h2 className="bc-h2">
-                <i className="bi bi-droplet"></i> Headspa Services
+                <i className="bi bi-droplet"></i> Headspa
               </h2>
               <p className="italic text-gray-600">
                 (Each headspa experience, besides the dry headspa experience,
@@ -448,7 +458,7 @@ const BodyCarePage = () => {
 
             <section id="body-treatment-services" className="bc-section">
               <h2 className="bc-h2">
-                <i className="bi bi-heart"></i> Body Treatment Services
+                <i className="bi bi-heart"></i> Body Treatment
               </h2>
               <p>
                 Our body treatments are designed to smooth, detoxify, and deeply
@@ -467,9 +477,6 @@ const BodyCarePage = () => {
                   massage.
                 </p>
               </div>
-            </section>
-
-            <section id="ultimate-spa-day" className="bc-section">
               <h3 className="bc-h3">
                 <i className="bi bi-brightness-high"></i> The Ultimate Spa Day
                 Package
@@ -498,7 +505,7 @@ const BodyCarePage = () => {
 
             <section id="feature-enhancing-services" className="bc-section">
               <h2 className="bc-h2">
-                <i className="bi bi-gem"></i> Feature Enhancing Services
+                <i className="bi bi-gem"></i> Feature Enhancing
               </h2>
               <p>
                 Highlight your natural beauty with treatments designed to
