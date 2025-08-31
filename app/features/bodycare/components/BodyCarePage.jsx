@@ -482,7 +482,7 @@ const BodyCarePage = () => {
                 Package
               </h3>
               <p>
-                Indulge in two full hours of pure luxury with our most
+                Indulge in 2½ full hours of pure luxury with our most
                 comprehensive treatment experience. This all-inclusive service
                 weaves together everything our spa has to offer — beginning with
                 a rejuvenating headspa ritual, followed by a fully customized
