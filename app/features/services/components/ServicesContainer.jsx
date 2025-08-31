@@ -34,7 +34,7 @@ export const ServicesContainer = () => {
         }}
       >
         <h2 className="header font-bold text-center text-5xl text-black my-2">
-          Our <span className="bg-jt-grad-text">Services</span>
+          <span className="bg-jt-grad-text">Hair </span> Services
         </h2>
         <div className="buttonbar bg-white max-w-max flex h-12 sm:h-16 flex-row flex-nowrap gap-1 items-center justify-center tabs tabs-boxed bg-transparent border-black border-4 rounded-2xl !text-black ">
           <div

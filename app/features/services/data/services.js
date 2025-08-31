@@ -112,27 +112,6 @@ export const services = {
       name: "Perm",
       description: "",
     },
-    {
-      id: "17",
-      price: "15.00",
-      isVariable: false,
-      name: "Eyebrow Waxing",
-      description: "",
-    },
-    {
-      id: "18",
-      price: "8.00",
-      isVariable: false,
-      name: "Lip Waxing",
-      description: "",
-    },
-    {
-      id: "19",
-      price: "8.00",
-      isVariable: false,
-      name: "Chin Waxing",
-      description: "",
-    },
   ],
   mens: [
     {

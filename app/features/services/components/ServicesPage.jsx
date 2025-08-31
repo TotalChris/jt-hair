@@ -16,7 +16,7 @@ const ServicesPage = () => {
             <i className="bi bi-scissors mx-auto text-black"></i>
           </h1>
           <h2 className="font-bold text-center text-5xl lg:text-7xl text-black my-2">
-            Our <span className="bg-jt-grad-text">Services</span>
+            <span className="bg-jt-grad-text">Hair </span>Services
           </h2>
           <h3 className="text-center text-xl font-medium italic text-gray-500">
             Select a Category Below:

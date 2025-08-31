@@ -72,7 +72,8 @@ export const Navbar = () => {
           </Link>
           <div className="hidden md:flex ml-0 gap-2 w-full md:w-auto h-auto !text-2xl md:ml-auto md:my-auto px-2">
             <MenuLink to="/" label="Home" />
-            <MenuLink to="/services" label="Services" />
+            <MenuLink to="/services" label="Hair Services" />
+            <MenuLink to="/body-care" label="Body Services" />
             <MenuLink to="/our-team" label="Our Team" />
             <MenuLink to="/about" label="About" />
             <MenuLink to="/contact" label="Contact" />
@@ -81,7 +82,12 @@ export const Navbar = () => {
         {navOpen && (
           <div className="flex flex-col gap-2 h-72 m-2 md:!hidden">
             <MenuLink to="/" label="Home" onClick={closeNav} />
-            <MenuLink to="/services" label="Services" onClick={closeNav} />
+            <MenuLink to="/services" label="Hair Services" onClick={closeNav} />
+            <MenuLink
+              to="/body-care"
+              label="Body Services"
+              onClick={closeNav}
+            />
             <MenuLink to="/our-team" label="Our Team" onClick={closeNav} />
             <MenuLink to="/about" label="About" onClick={closeNav} />
             <MenuLink to="/contact" label="Contact" onClick={closeNav} />
