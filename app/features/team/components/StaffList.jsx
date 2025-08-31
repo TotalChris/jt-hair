@@ -17,7 +17,7 @@ export const StaffList = ({ staffList }) => {
               alt={staff.name}
             />
             <div className="pl-4 bio">
-              <h1 className="font-bold text-center text-4xl text-black my-2">
+              <h1 className="font-bold text-4xl text-black my-2">
                 {staff.name}
               </h1>
               <hr style={{ height: "2px", width: "100%" }} />

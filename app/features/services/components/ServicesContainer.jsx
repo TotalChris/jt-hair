@@ -25,12 +25,12 @@ export const ServicesContainer = () => {
     <div id="servicesContainer">
       <div
         id="banner"
-        className={`pb-16 pt-6 !sticky top-32 z-10 flex ${
+        className={`pb-24 pt-28 sm:pt-20 !sticky top-20 z-10 flex ${
           headerScrolled ? "expand" : ""
         }`}
         style={{
           backgroundImage:
-            "linear-gradient(to bottom, white 55%, transparent 100%)",
+            "linear-gradient(to bottom, white 60%, transparent 100%)",
         }}
       >
         <h2 className="header font-bold text-center text-5xl text-black my-2">

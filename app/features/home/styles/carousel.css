@@ -94,7 +94,7 @@
     mask: calc(50% + var(--s)*0.341) calc(50% + var(--s)*0) var(--g), calc(50% + var(--s)*0.241) calc(50% + var(--s)*0.241) var(--g), calc(50% + var(--s)*0) calc(50% + var(--s)*0.341) var(--g), calc(50% + var(--s)*-0.241) calc(50% + var(--s)*0.241) var(--g), calc(50% + var(--s)*-0.341) calc(50% + var(--s)*0) var(--g), calc(50% + var(--s)*-0.241) calc(50% + var(--s)*-0.241) var(--g), calc(50% + var(--s)*0) calc(50% + var(--s)*-0.341) var(--g), calc(50% + var(--s)*0.241) calc(50% + var(--s)*-0.241) var(--g), radial-gradient(calc(var(--s)*0.433), #000 99%, #0000 101%) subtract, calc(50% + var(--s)*0.5) calc(50% + var(--s)*0.207) var(--g), calc(50% + var(--s)*0.207) calc(50% + var(--s)*0.5) var(--g), calc(50% + var(--s)*-0.207) calc(50% + var(--s)*0.5) var(--g), calc(50% + var(--s)*-0.5) calc(50% + var(--s)*0.207) var(--g), calc(50% + var(--s)*-0.5) calc(50% + var(--s)*-0.207) var(--g), calc(50% + var(--s)*-0.207) calc(50% + var(--s)*-0.5) var(--g), calc(50% + var(--s)*0.207) calc(50% + var(--s)*-0.5) var(--g), calc(50% + var(--s)*0.5) calc(50% + var(--s)*-0.207) var(--g);
     background: linear-gradient(45deg, rgba(240, 203, 0, 1) 0%, rgba(255, 177, 0, 1) 100%);
     position: absolute;
-    top: 125px;
+    top: 150px;
     right: 200px;
     z-index: 40;
     display: flex;
@@ -122,7 +122,7 @@
 
     .wavy-circle {
         --s: 175px;
-        top: 170px;
+        top: 230px;
         right: 20px;
         /* adjust to control the size */
     }
@@ -142,4 +142,15 @@
 .slant {
     font-style: italic;
     font-weight: 600;
+}
+
+.sticker-rim {
+    rotate: -55deg;
+}
+
+.disclaimer {
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 30px;
+    @apply text-neutral-700;
 }

@@ -11,7 +11,7 @@ const ServicesPage = () => {
         description="JT Hair offers services for all hair types and styles."
       />
       <div className="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto my-4 mx-8">
-        <div className="pt-24 !pb-12">
+        <div className="pt-24">
           <h1 className="font-bold text-7xl p-4 text-center">
             <i className="bi bi-scissors mx-auto text-black"></i>
           </h1>
