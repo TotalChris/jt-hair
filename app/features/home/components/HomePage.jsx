@@ -13,7 +13,7 @@ const HomePage = () => {
         <div className="flex flex-col mt-2">
           <MainCarousel />
           <div className="z-10">
-            <div className="w-full flex flex-col md:flex-row gap-2 justify-center mx-auto text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl text-black font-medium my-2 md:my-10 mx-0 z--10">
+            <div className="w-full flex flex-col gap-2 justify-center mx-auto text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl text-black font-medium my-2 md:my-10 mx-0 z--10">
               <div className="text-center">
                 <span className="font-bold bg-jt-grad-text jt-headpiece-1">
                   Luxury{" "}
@@ -22,16 +22,19 @@ const HomePage = () => {
               </div>
               <div className="text-center">
                 <span className="font-bold bg-jt-grad-text jt-headpiece-3">
+                  Premium{" "}
+                </span>
+                <span className="jt-headpiece-4">Body Care,</span>
+              </div>
+              <div className="text-center">
+                <span className="font-bold bg-jt-grad-text jt-headpiece-5">
                   Modest{" "}
                 </span>
-                <span className="jt-headpiece-4">Prices.</span>
+                <span className="jt-headpiece-6">Prices.</span>
               </div>
             </div>
             <hr className="my-8 mx-16 xl:mx-auto lg:max-w-5xl border-black" />
-            <p className="text-xl text-center text-gray-500 italic jt-headpiece-5">
-              Walk-Ins and Appointments Welcome
-            </p>
-            <div className="flex flex-row gap-2 justify-center w-full mt-5 mb-10 jt-headpiece-5">
+            <div className="flex flex-row gap-2 justify-center w-full my-5 jt-headpiece-7">
               <a
                 href={isMobile() ? "tel:8105225028" : "/contact"}
                 id="buttonRoot"

@@ -5,6 +5,7 @@ export default [
     index("./features/home/components/HomePage.jsx"),
     route("about", "./features/about/components/AboutPage.jsx"),
     route("services", "./features/services/components/ServicesPage.jsx"),
+    route("body-care", "./features/bodycare/components/BodyCarePage.jsx"),
     route("contact", "./features/contact/components/ContactPage.jsx"),
     route("our-team", "./features/team/components/TeamPage.jsx"),
     route("*?", "./features/shared/components/navigation/CatchAll.jsx"),

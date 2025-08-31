@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   const location = useLocation();
 
-  const store = hours[new Date().getDay()];
+  const store = hours[0];
 
   const closeNav = () => setNavOpen(false);
 
@@ -32,8 +32,8 @@ export const Navbar = () => {
     >
       <div
         id="navbarWrapper"
-        className={`min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 mt-4 bg-black drop-shadow-2xl rounded-t-box h-20 md:!h-20 ${
-          navOpen ? "h-96" : ""
+        className={`min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 mt-4 bg-black rounded-box h-20 md:!h-20 ${
+          navOpen ? "h-[425px]" : ""
         }`}
       >
         <div className="flex flex-row justify-between items-center w-full gap-4 px-2 h-20">
@@ -70,9 +70,10 @@ export const Navbar = () => {
           >
             <i className="bi bi-telephone"></i>
           </Link>
-          <div className="hidden md:flex ml-0 gap-2 w-full md:w-auto h-auto !text-2xl md:ml-auto md:my-auto px-2">
+          <div className="hidden md:flex ml-0 gap-1 w-full md:w-auto h-auto !text-2xl md:ml-auto md:my-auto px-2">
             <MenuLink to="/" label="Home" />
-            <MenuLink to="/services" label="Services" />
+            <MenuLink to="/services" label="Hair Services" />
+            <MenuLink to="/body-care" label="Body Services" />
             <MenuLink to="/our-team" label="Our Team" />
             <MenuLink to="/about" label="About" />
             <MenuLink to="/contact" label="Contact" />
@@ -81,7 +82,12 @@ export const Navbar = () => {
         {navOpen && (
           <div className="flex flex-col gap-2 h-72 m-2 md:!hidden">
             <MenuLink to="/" label="Home" onClick={closeNav} />
-            <MenuLink to="/services" label="Services" onClick={closeNav} />
+            <MenuLink to="/services" label="Hair Services" onClick={closeNav} />
+            <MenuLink
+              to="/body-care"
+              label="Body Services"
+              onClick={closeNav}
+            />
             <MenuLink to="/our-team" label="Our Team" onClick={closeNav} />
             <MenuLink to="/about" label="About" onClick={closeNav} />
             <MenuLink to="/contact" label="Contact" onClick={closeNav} />
@@ -90,18 +96,25 @@ export const Navbar = () => {
       </div>
       <div
         id="ticker"
-        className="min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 bg-jt-grad text-black drop-shadow-2xl rounded-b-box h-8 flex flex-row items-center justify-center gap-2 z-50"
+        className="sm:text-base text-sm flex flex-col sm:flex-row justify-center sm:gap-2 min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 my-1 py-1 bg-jt-grad text-black rounded-box z-50"
       >
-        <div style={{ fontWeight: 800 }}>
-          {store.isOpen ? "Open Today" : "Closed"}
+        <div className="h-8 flex flex-row items-center justify-center gap-1">
+          <div style={{ fontWeight: 800 }}>
+            Hair Care {store.isOpen ? "Open" : "Closed"}
+          </div>
+          <div>
+            {"• "}
+            {store.isOpen
+              ? store.start +
+                " - " +
+                store.end +
+                (store.restricted ? " (By Appointment)" : "")
+              : "Open Tues 9 - 7"}
+          </div>
         </div>
-        <div>
-          {store.isOpen
-            ? store.start +
-              " - " +
-              store.end +
-              (store.restricted ? " (By Appointment)" : "")
-            : "Open Tuesday 9 AM - 7 PM"}
+        <div className="h-8 flex flex-row items-center justify-center gap-1">
+          <div style={{ fontWeight: 800 }}>Body Care Open</div>
+          <div>• By Appointment Only</div>
         </div>
       </div>
     </div>

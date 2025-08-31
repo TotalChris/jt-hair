@@ -1,3 +1,6 @@
+/* Import Bootstrap Icons first so its classes are available app-wide */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -214,7 +217,19 @@ body,
 
 .jt-headpiece-5 {
     position: relative;
-    animation: 0.8s ease-out 1.2s 1 slide-text-in;
+    animation: 0.5s ease-out 1.5s 1 slide-text-in;
+    animation-fill-mode: both;
+}
+
+.jt-headpiece-6 {
+    position: relative;
+    animation: 0.5s ease-out 1.7s 1 slide-text-in;
+    animation-fill-mode: both;
+}
+
+.jt-headpiece-7 {
+    position: relative;
+    animation: 0.8s ease-out 1.8s 1 slide-text-in;
     animation-fill-mode: both;
 }
 
