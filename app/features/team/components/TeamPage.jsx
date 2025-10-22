@@ -19,7 +19,7 @@ const TeamPage = () => {
     <div className="min-h-screen">
       <MetaContent
         title="JT Hair Care of Brighton | Our Team"
-        description="Meet the people that make JT Hair a great place for your hair care."
+        description="Meet the people that make JT Hair a great place for your hair & body care needs."
       />
       <div>
         <div className="py-4 min-w-screen pt-24">
@@ -30,7 +30,7 @@ const TeamPage = () => {
             Our <span className="bg-jt-grad-text">Team</span>
           </h1>
           <h1 className="text-center text-xl font-medium italic text-gray-700 mx-4">
-            Meet the people who make JT Hair the best place for your hair care
+            Meet the people who make JT Hair the best place for your hair & body care
             needs.
           </h1>
         </div>
