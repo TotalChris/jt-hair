@@ -4,6 +4,8 @@ import { hours } from "../../data/hours";
 import { Link, useLocation } from "react-router";
 import { isMobile } from "../../util/isMobile";
 import { MenuLink } from "./MenuLink";
+import { useCurrentStoreStateQuery } from "../../queries/hours";
+import { Show } from "../utility/Show";
 
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -17,6 +19,8 @@ export const Navbar = () => {
   const isMobileDevice = useMemo(() => {
     return isMobile();
   }, []);
+
+  const { data, isLoading, error } = useCurrentStoreStateQuery();
 
   return (
     <div
@@ -99,18 +103,16 @@ export const Navbar = () => {
         className="sm:text-base text-sm flex flex-col sm:flex-row justify-center sm:gap-2 min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 my-1 py-1 bg-jt-grad text-black rounded-box z-50"
       >
         <div className="h-8 flex flex-row items-center justify-center gap-1">
-          <div style={{ fontWeight: 800 }}>
-            Hair Care {store.isOpen ? "Open" : "Closed"}
-          </div>
-          <div>
-            {"• "}
-            {store.isOpen
-              ? store.start +
-                " - " +
-                store.end +
-                (store.restricted ? " (By Appointment)" : "")
-              : "Open Tues 9 - 7"}
-          </div>
+          <Show when={!isLoading && !error} else={
+            <div className="h-4 rounded-md skeleton w-72" style={{ backgroundColor: "rgba(0, 0, 0, 0.3)"}} data-theme="dark" />
+          }>
+            <div style={{ fontWeight: 800 }}>
+              {data?.nowMessage}
+            </div>
+            <div>
+              {`• ${data?.nextMessage}`}
+            </div>
+          </Show>
         </div>
         <div className="h-8 flex flex-row items-center justify-center gap-1">
           <div style={{ fontWeight: 800 }}>Body Care Open</div>
