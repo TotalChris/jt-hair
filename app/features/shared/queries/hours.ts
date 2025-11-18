@@ -4,6 +4,7 @@ export const useCurrentStoreStateQuery = () => {
     return useQuery({
         queryKey: ['currentStoreState'],
         queryFn: () => getCurrentStoreState(),
+        retry: 1,
     })
 }
 
