@@ -36,11 +36,11 @@ export const Navbar = () => {
     >
       <div
         id="navbarWrapper"
-        className={`min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 mt-4 bg-black rounded-box h-20 md:!h-20 ${
-          navOpen ? "h-[425px]" : ""
+        className={`min-w-screen lg:max-w-5xl 2xl:max-w-7xl lg:mx-auto mx-4 mt-4 bg-black rounded-box h-[4.5rem] md:!h-[4.5rem] ${
+          navOpen ? "!h-[417px]" : ""
         }`}
       >
-        <div className="flex flex-row justify-between items-center w-full gap-4 px-2 h-20">
+        <div className="flex flex-row justify-between items-center w-full gap-4 px-2 h-[4.5rem]">
           <button
             id="drawerButton"
             className={`btn btn-ghost text-2xl font-bold md:hidden h-14 ${
