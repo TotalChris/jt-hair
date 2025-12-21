@@ -47,6 +47,7 @@ const ContactPage = () => {
                 Walk-Ins & Appointments Welcome
               </h3>
               <HoursTable />
+              <p className="text-gray-500 text-sm">Hours may vary due to holidays and other events.</p>
             </div>
           </div>
         </div>
