@@ -7,10 +7,10 @@ export const ServiceCard = ({ name, price, description, isVariable = false }) =>
             {name}
           </div>
           <div className="stat-value bg-jt-grad-text" id="servicePrice">
-            {price}
+            {price}{isVariable ? "+" : ""}
           </div>
           <div className="stat-desc text-neutral-300" id="serviceDescription">
-            {description}{isVariable ? "+" : ""}
+            {description}
           </div>
         </div>
       </div>
