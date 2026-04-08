@@ -75,6 +75,7 @@ export const ServicesContainer = () => {
             name={service.name}
             price={service.price}
             description={service.description}
+            isVariable={service.isVariable}
           />
         ))}
       </div>

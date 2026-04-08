@@ -1,4 +1,4 @@
-export const ServiceCard = ({ name, price, description }) => {
+export const ServiceCard = ({ name, price, description, isVariable = false }) => {
   return (
     <div className="stats shadow" id="cardRoot">
       <div className="bg-accent-content gap-2 bg-black bg-cover">
@@ -7,7 +7,7 @@ export const ServiceCard = ({ name, price, description }) => {
             {name}
           </div>
           <div className="stat-value bg-jt-grad-text" id="servicePrice">
-            {price}
+            {price}{isVariable ? "+" : ""}
           </div>
           <div className="stat-desc text-neutral-300" id="serviceDescription">
             {description}
