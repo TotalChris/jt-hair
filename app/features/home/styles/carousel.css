@@ -132,7 +132,7 @@
     color: black;
     user-select: none;
     -webkit-user-select: none;
-    font-weight: semibold;
+    font-weight: bold;
 }
 
 .emphasis {
