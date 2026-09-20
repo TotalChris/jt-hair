@@ -21,8 +21,8 @@ export const MainCarousel = () => (
         <img src={Tools} className="childImage" />
       </div>
       <div className="wavy-circle">
-        <div className="sticker-text emphasis">JT Body Care</div>
-        <div className="sticker-text slant">Now Open!</div>
+        <div className="sticker-text emphasis">Walk-ins</div>
+        <div className="sticker-text slant">Welcome!</div>
         <svg
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,6 @@ export const MainCarousel = () => (
           />
           <text>
             <textPath href="#circlePath" className="disclaimer">
-              By appt. only
             </textPath>
           </text>
         </svg>
